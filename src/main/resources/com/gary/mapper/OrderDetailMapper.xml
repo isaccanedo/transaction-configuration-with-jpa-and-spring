@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.isaccanedo.mapper.OrderDetailMapper">
+
+    <!-- add order detail -->
+    <insert id="insert" parameterType="com.isaccanedo.model.OrderDetail" useGeneratedKeys="true" keyProperty="id">
+      insert into order_detail (order_id,weapon,amount,status)
+      values (#{orderId}, #{weapon}, #{amount}, #{status})
+    </insert>
+
+</mapper>
